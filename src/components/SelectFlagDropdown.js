@@ -19,7 +19,7 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 
 const CustomMenu = React.forwardRef(
   ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
-    const [value, setValue] = useState('');
+    const [value] = useState('');
 
     return (
       <div
@@ -52,16 +52,12 @@ const SelectFlagDropdown = ({selected, onSelect}) => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu as={CustomMenu}>
-        {Object.keys(rates).map(code => {
-          if(rates[code] !== 1) {
-            return (
-              <Dropdown.Item key={code} as="li" eventKey="1" onClick={() => onSelect(code)}>
-                <i className={`currency-flag currency-flag-${code.toLowerCase()}`} />
-                <span>{code}</span>
-              </Dropdown.Item>
-            )
-          }
-        })}
+        {Object.keys(rates).map(code => rates[code] !== 1 && (
+          <Dropdown.Item key={code} as="li" eventKey="1" onClick={() => onSelect(code)}>
+            <i className={`currency-flag currency-flag-${code.toLowerCase()}`} />
+            <span>{code}</span>
+          </Dropdown.Item>
+        ))}
         
       </Dropdown.Menu>
     </Dropdown>
