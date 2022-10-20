@@ -24,7 +24,7 @@ const ExchangeRate = ({ from, to, setFrom, setTo }) => {
           <Row className="mb-3">
             <Form.Group className="mb-3">
               <Form.Label>Ammout</Form.Label>
-              <Form.Control type="number" inputMode='decimal' autoComplete='off' placeholder="1000" value={ammount} onChange={(e) => setAmmount(e.target.value)} />
+              <Form.Control data-testid="input-ammount" type="number" inputMode='decimal' autoComplete='off' placeholder="1000" value={ammount} onChange={(e) => setAmmount(e.target.value)} />
             </Form.Group>
           </Row>
           <Row className="mb-3">

@@ -10,7 +10,7 @@ const ExchangeRateTotal = ({ammount, rate, to, from}) => {
   return (
     <div>
       <div>Exchange Rate</div>
-      <span className='ammount'>{numberFormat(ammount*parseFloat(rate))}</span>
+      <span className='ammount' data-testid="ammount-total">{numberFormat(ammount*parseFloat(rate))}</span>
       <p className='text-small'>That's 1 {from} = {rate} {to}</p>
     </div>
   )

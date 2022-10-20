@@ -1,10 +1,10 @@
 import {useQuery} from '@tanstack/react-query';
-import axios from 'axios';
 
 const getRates = async (currency_code) => {
-    const { data } = await axios.get(
+    const response = await fetch(
       `https://exchange-api-tannus.herokuapp.com/exchange/${currency_code}/rates_for`
     );
+    const data = await response.json();
     return data;
 }
 
