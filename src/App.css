@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -20,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -35,4 +30,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+li>.currency-flag:first-child {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.btn-currency {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.btn-currency > i {
+  vertical-align: middle;
+}
+
+.currency-flag:first-child {
+  margin-right: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #5d7079;
+}
+
+.calculated-ammount .ammount {
+  font-size: 35px;
+}
+
+.dropdown-menu-codes {
+  overflow: auto;
+  max-height: 200px;
 }
