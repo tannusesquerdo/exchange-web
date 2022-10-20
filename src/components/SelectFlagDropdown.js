@@ -4,6 +4,7 @@ import {useQueryClient} from '@tanstack/react-query';
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
   <a
+    href="/"
     type='button'
     className='form-select btn-currency'
     ref={ref}
