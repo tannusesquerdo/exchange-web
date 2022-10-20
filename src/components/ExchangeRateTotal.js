@@ -1,16 +1,17 @@
 import React from 'react'
 
-const ExchangeRateTotal = ({ammount, rate, currency}) => {
+const ExchangeRateTotal = ({ammount, rate, to, from}) => {
   const numberFormat = (value) =>
     new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency
+      currency: to
     }).format(value);
 
   return (
     <div>
       <div>Exchange Rate</div>
       <span className='ammount'>{numberFormat(ammount*parseFloat(rate))}</span>
+      <p className='text-small'>That's 1 {from} = {rate} {to}</p>
     </div>
   )
 }

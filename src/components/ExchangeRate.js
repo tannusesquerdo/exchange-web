@@ -16,7 +16,7 @@ const ExchangeRate = ({ from, to, setFrom, setTo }) => {
   return (
     <>
       <Card.Header className='text-center calculated-ammount'>
-        <ExchangeRateTotal ammount={ammount} rate={rates[to]} currency={to} />
+        <ExchangeRateTotal ammount={ammount} rate={rates[to]} to={to} from={from} />
       </Card.Header>
       <Card.Body>
         <Card.Title></Card.Title>
